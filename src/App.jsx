@@ -4,6 +4,12 @@ import Pet from "./Pet";
 export default function App() {
   const [legs, setLegs] = useState(4); // Default value
 
+  const handleLegsChange = (e) => {
+    const value = e.target.value;
+    // If the input is a string, pass it as is; otherwise, convert to a number
+    setLegs(isNaN(value) ? value : Number(value));
+  };
+
   return (
     <div>
       <h1>PropTypes Examples</h1>
@@ -11,11 +17,7 @@ export default function App() {
 
       <label>
         Modify Number of Legs:
-        <input
-          type="text"
-          value={legs}
-          onChange={(e) => setLegs(e.target.value)} // Incorrect type (string)
-        />
+        <input type="text" value={legs} onChange={handleLegsChange} />
       </label>
     </div>
   );
