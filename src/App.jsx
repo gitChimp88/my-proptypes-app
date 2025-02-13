@@ -6,7 +6,7 @@ export default function App() {
 
   const handleLegsChange = (e) => {
     const value = e.target.value;
-    // If the input is a string, pass it as is; otherwise, convert to a number
+    // For demonstration purposes: if the input is a string, pass it as is; otherwise, convert to a number
     setLegs(isNaN(value) ? value : Number(value));
   };
 
