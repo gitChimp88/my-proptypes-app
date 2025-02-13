@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <h1>PropTypes Examples</h1>
-      <Pet animal={17} color={15} legs={legs} />
+      <Pet animal="Dog" color="Brown" legs={legs} />
 
       <label>
         Modify Number of Legs:
